@@ -1,0 +1,24 @@
+[versions]
+androidx-appCompat = "1.6.1"
+androidx-constraintlayout = "2.1.4"
+androidx-navigation = "2.7.7"
+androidx-fragment = "1.6.2"
+androidx-lifecycle-runtime-compose = "2.7.0"
+androidx-compose-material3 = "1.2.0"
+junit = "4.13.2"
+
+
+[libraries]
+androidx-appCompat = { module = "androidx.appcompat:appcompat", version.ref = "androidx-appCompat" }
+androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "androidx-constraintlayout" }
+
+androidx-fragment = { module = "androidx.fragment:fragment-ktx", version.ref = "androidx-fragment" }
+
+androidx-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "androidx-lifecycle-runtime-compose" }
+androidx-navigation-fragment = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "androidx-navigation" }
+androidx-navigation-ui = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "androidx-navigation" }
+
+androidx-compose-material3 = { module = "androidx.compose.material3:material3-android", version.ref = "androidx-compose-material3" }
+
+junit = { module = "junit:junit", version.ref = "junit" }
+[plugins]
