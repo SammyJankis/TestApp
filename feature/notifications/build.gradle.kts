@@ -1,34 +1,44 @@
 plugins {
     id("com.android.library")
-    kotlin("android")}
+    kotlin("android")
+    id("com.google.devtools.ksp")
+    id("com.google.dagger.hilt.android")
+}
+
 
 android {
     namespace = "com.adidas.notifications"
-    compileSdk = 34
+    compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
-        minSdk = 28
+        minSdk = libs.versions.minSdk.get().toInt()
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = libs.versions.jvmTarget.get()
     }
     buildFeatures {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.9"
+        kotlinCompilerExtensionVersion = libs.versions.kotlinCompilerExtensionVersion.get()
     }
 }
 
 dependencies {
     implementation(libs.androidx.fragment)
     implementation(libs.androidx.lifecycle.runtime.compose)
+    implementation(libs.androidx.foundation.android)
+
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
+
     implementation(project(":ui"))
     implementation(project(":analytics"))
+    implementation(project(":feature:notifications:domain"))
 
     testImplementation(libs.junit)
 }
