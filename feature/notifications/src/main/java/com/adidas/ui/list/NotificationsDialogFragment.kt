@@ -1,4 +1,4 @@
-package com.adidas.ui
+package com.adidas.ui.list
 
 import android.app.AlertDialog
 import android.app.Dialog

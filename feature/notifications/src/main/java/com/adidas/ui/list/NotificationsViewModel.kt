@@ -1,4 +1,4 @@
-package com.adidas.ui
+package com.adidas.ui.list
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

@@ -22,6 +22,7 @@ android {
     }
     buildFeatures {
         compose = true
+        viewBinding = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = libs.versions.kotlinCompilerExtensionVersion.get()
@@ -36,6 +37,7 @@ dependencies {
 
     implementation(libs.hilt.android)
     implementation(libs.androidx.appCompat)
+    implementation(libs.androidx.navigation.compose)
     ksp(libs.hilt.compiler)
 
     implementation(project(":ui"))

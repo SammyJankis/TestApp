@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/notifications_detail_graph"
+    app:startDestination="@id/navigation_notifications_detail_fragment">
+
+    <fragment
+        android:id="@+id/navigation_notifications_detail_fragment"
+        android:name="com.adidas.ui.detail.NotificationsDetailFragment"
+        android:label="@string/title_notifications_detail_fragment" />
+
+    <fragment
+        android:id="@+id/navigation_notifications_detail_change_fragment"
+        android:name="com.adidas.ui.detail.NotificationsDetailChangeFragment"
+        android:label="@string/title_notifications_detail_change_fragment">
+        <argument
+            android:name="message"
+            android:defaultValue="No message"
+            app:argType="string" />
+        <deepLink app:uri="testapp://detail/{message}" />
+    </fragment>
+
+</navigation>

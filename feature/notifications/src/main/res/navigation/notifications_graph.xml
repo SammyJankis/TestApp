@@ -6,17 +6,12 @@
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.adidas.ui.NotificationsFragment"
+        android:name="com.adidas.ui.list.NotificationsFragment"
         android:label="@string/title_notifications" />
 
     <dialog
         android:id="@+id/navigation_notifications_dialog"
-        android:name="com.adidas.ui.NotificationsDialogFragment"
+        android:name="com.adidas.ui.list.NotificationsDialogFragment"
         android:label="@string/title_notifications_dialog" />
-
-    <activity
-        android:id="@+id/navigation_notifications_detail_activity"
-        android:name="com.adidas.ui.NotificationsDetailActivity"
-        android:label="@string/title_notifications_detail_activity" />
 
 </navigation>

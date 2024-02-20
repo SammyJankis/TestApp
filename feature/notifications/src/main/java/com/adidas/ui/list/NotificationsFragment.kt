@@ -1,5 +1,6 @@
-package com.adidas.ui
+package com.adidas.ui.list
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,13 +11,14 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.fragment.findNavController
 import com.adidas.entities.NotificationUiEntity
 import com.adidas.entities.bundleName
+import com.adidas.ui.NotificationCardComposable
+import com.adidas.ui.detail.NotificationsDetailActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -60,10 +62,9 @@ class NotificationsFragment : Fragment() {
     }
 
     private fun showNotificationDetails(notification: NotificationUiEntity) {
-        findNavController().navigate(
-            com.adidas.notifications.R.id.navigation_notifications_detail_activity,
-            bundleOf(bundleName to notification)
-        )
+        val intent = Intent(context, NotificationsDetailActivity::class.java)
+        intent.putExtra(bundleName, notification)
+        startActivity(intent)
     }
 }
 
