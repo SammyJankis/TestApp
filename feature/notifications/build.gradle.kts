@@ -32,8 +32,10 @@ dependencies {
     implementation(libs.androidx.fragment)
     implementation(libs.androidx.lifecycle.runtime.compose)
     implementation(libs.androidx.foundation.android)
+    implementation(libs.androidx.navigation.fragment)
 
     implementation(libs.hilt.android)
+    implementation(libs.androidx.appCompat)
     ksp(libs.hilt.compiler)
 
     implementation(project(":ui"))

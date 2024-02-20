@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_notifications_dialog">Notifications dialog</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_notifications_detail_activity">Notifications Detail</string>
+</resources>
